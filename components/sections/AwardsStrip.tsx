@@ -51,9 +51,9 @@ export default function AwardsStrip() {
       <Grid>
         {awardBands.map((b, i) => (
           <Band key={i}>
-            <AnimatedText as="span" text={b.headline} trigger delay={i * 0.05}>
-              <Big>{b.headline}</Big>
-            </AnimatedText>
+            <Big>
+              <AnimatedText as="span" text={b.headline} trigger delay={i * 0.05} />
+            </Big>
             <Sub>{b.sub}</Sub>
           </Band>
         ))}

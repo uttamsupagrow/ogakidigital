@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "styled-components";
 import StyledComponentsRegistry from "@/lib/registry";
+import Providers from "@/components/Providers";
 import { GlobalStyle } from "@/styles/GlobalStyle";
 import { theme } from "@/styles/theme";
 import { reckless, gtAmerica } from "@/lib/localFont";
@@ -48,14 +48,14 @@ export default function RootLayout({
     <html lang="en" className={`${reckless.variable} ${gtAmerica.variable}`}>
       <body>
         <StyledComponentsRegistry>
-          <ThemeProvider theme={theme}>
+          <Providers theme={theme}>
             <GlobalStyle />
             <SiteHeader />
             <main id="main">{children}</main>
             <SiteFooter />
             <CookieConsent />
             <AnalyticsTracker />
-          </ThemeProvider>
+          </Providers>
         </StyledComponentsRegistry>
       </body>
     </html>

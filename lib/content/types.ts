@@ -33,6 +33,7 @@ export interface CaseStudy {
   results: string[];
   image?: string;
   logo?: string;
+  highlightsImages?: string[];
   relatedSlugs?: string[];
 }
 
